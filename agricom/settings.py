@@ -125,3 +125,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (23.6850, 90.3563),
+    'DEFAULT_ZOOM': 6,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 20,
+    'SCALE': 'both',
+    'ATTRIBUTION_PREFIX': 'Developed My Mizan CUET URP11',
+    'TILES': 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}'
+}
