@@ -2,19 +2,25 @@
 This is an improvement of my django project
 
 pip install virtualenv
+
 virtualenv lifeingis
+
 cd scripts
+
 activate
+
 pip install django==1.10.5
+
 pip install psycopg2==2.7
 
 install_postgresql9.3_postgis2.1_ubuntu.md 
 https://gist.github.com/hewerthomn/aa97dbf686a1c4f9ce49
 
+
 python manage.py ogrinspect Incidences/data/Boundary.shp areas --srid=4326 --mapping --multi
 
-#Requirements
 
+#Requirements
 
     astroid==1.6.6
     backports.functools-lru-cache==1.6.1
