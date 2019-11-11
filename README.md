@@ -14,6 +14,8 @@ https://gist.github.com/hewerthomn/aa97dbf686a1c4f9ce49
 python manage.py ogrinspect Incidences/data/Boundary.shp areas --srid=4326 --mapping --multi
 
 #Requirements
+
+
     astroid==1.6.6
     backports.functools-lru-cache==1.6.1
     configparser==4.0.2
