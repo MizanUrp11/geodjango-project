@@ -15,4 +15,15 @@ class ReporterModel(models.Model):
     class Meta:
         verbose_name_plural = 'Incidences'
     
+class Counties(models.Model):
+    counties = models.CharField(max_length=25)
+    codes = models.IntegerField()
+    cty_code = models.CharField(max_length=24)
+    dis = models.IntegerField()
+    geom = models.MultiPolygonField(srid=4326)
 
+
+
+    def __str__(self):
+        return self.counties
+    
