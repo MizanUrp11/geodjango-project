@@ -31,6 +31,19 @@
     <script>
         function our_layers(map,options) {
             var datasets = new L.GeoJSON.AJAX("{% url 'county' %}",{
+                style: function colors (feature) {                            
+                    switch (feature.properties.counties){
+                        case 'WAJIR':
+                        return{
+                            color: '#e74c3c',
+                        }
+                        break;
+                        default:
+                        return{
+                           weight:1
+                        }
+                    }
+                },
                 onEachFeature: function (feature,layer) {
                     layer.bindPopup(feature.properties.counties.toString());
                 }
