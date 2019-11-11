@@ -33,8 +33,13 @@
             var datasets = new L.GeoJSON.AJAX("{% url 'county' %}",{
 
             });
+            var points = new L.GeoJSON.AJAX("{% url 'incidences' %}",{
+
+            });
 
             datasets.addTo(map);
+            points.addTo(map);
+
         }
     </script>
 
