@@ -57,7 +57,7 @@ ROOT_URLCONF = 'agricom.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,9 +125,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = ( 
+    os.path.join(BASE_DIR,'static'),
+)
+
 
 LEAFLET_CONFIG = {
-    'DEFAULT_CENTER': (23.6850, 90.3563),
+    'DEFAULT_CENTER': (1.112348, 38.194712),
     'DEFAULT_ZOOM': 6,
     'MIN_ZOOM': 3,
     'MAX_ZOOM': 20,

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+{% load leaflet_tags %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My first Map</title>
+
+    {% leaflet_js %}
+    {% leaflet_css %}
+
+
+    <style>
+        body{
+            margin: 0;padding: 0;
+        }
+    #gis{
+        width: 100%;
+        height: 100vh;
+    }
+    </style>
+<script src="{% static 'dist/leaflet.ajax.js' %}"></script>
+
+</head>
+
+<body>
+    <script>
+        function our_layers(map,options) {
+            var datasets = new L.GeoJSON.AJAX("{% url 'county' %}",{
+
+            });
+
+            datasets.addTo(map);
+        }
+    </script>
+
+    {% leaflet_map "gis" callback="window.our_layers" %}
+
+</body>
+</html>
